@@ -28,7 +28,7 @@
 				<control type="label">
 					<top>17</top>
 					<!-- <label>$INFO[Window(Home).Property(nimbus_saved_list_id)]</label> -->
-					<label>[LIGHT]$VAR[HomescreenFlixCrumbs]$VAR[SearchFlixCrumbs][COLOR unfocused_text]$PARAM[label][/COLOR]$PARAM[label_focus][/LIGHT]</label>
+					<label>[LIGHT]$VAR[HomescreenFlixCrumbs]$VAR[SearchFlixCrumbs][COLOR unfocused_text]$PARAM[label][/COLOR]$INFO[Container($PARAM[list_id]).PluginCategory, [B]»[/B] [COLOR unfocused_text], [/COLOR]]$PARAM[label_focus][/LIGHT]</label>
 					<font>font23_title</font>
 					<textcolor>$VAR[MenuSelectorColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -40,7 +40,7 @@
 				<control type="label">
 					<left>33</left>
 					<top>17</top>
-					<label>[LIGHT]$VAR[HomescreenFlixCrumbs]$VAR[SearchFlixCrumbs][COLOR unfocused_text]$PARAM[label][/COLOR]$PARAM[label_focus][/LIGHT]</label>
+					<label>[LIGHT]$VAR[HomescreenFlixCrumbs]$VAR[SearchFlixCrumbs][COLOR unfocused_text]$PARAM[label][/COLOR]$INFO[Container($PARAM[list_id]).PluginCategory, [B]»[/B] [COLOR unfocused_text], [/COLOR]]$PARAM[label_focus][/LIGHT]</label>
 					<font>font23_title</font>
 					<textcolor>$VAR[MenuSelectorColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>

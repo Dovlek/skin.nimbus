@@ -429,7 +429,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.nimbus.helper, mode=set_api_key)</onclick>
 				</control>
-				<control type="button" id="6481">
+					<control type="button" id="6481">
 					<label>Reset all ratings</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetString(RatingSlot1,none)</onclick>
@@ -524,6 +524,12 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
+				</control>
+				<control type="radiobutton" id="707">
+					<label>Fill progress indicator</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(fill_progress)</onclick>
+					<selected>Skin.HasSetting(fill_progress)</selected>
 				</control>
 				<control type="button" id="708">
 					<label>$LOCALIZE[31024]</label>

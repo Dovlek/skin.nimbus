@@ -94,6 +94,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot1),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rta)">Rotten Tomatoes (Audience)</value>
@@ -106,6 +107,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot2),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rta)">Rotten Tomatoes (Audience)</value>
@@ -118,6 +120,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot3),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rta)">Rotten Tomatoes (Audience)</value>
@@ -130,6 +133,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot4),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rta)">Rotten Tomatoes (Audience)</value>
@@ -142,6 +146,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot5),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rta)">Rotten Tomatoes (Audience)</value>
@@ -154,6 +159,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot6),metacritic)">Metacritic</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),trakt)">Trakt</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxd)">Letterboxd</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxdx2)">Letterboxd ×2</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),mdblist)">MDbList</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rtc)">Rotten Tomatoes (Critic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rta)">Rotten Tomatoes (Audience)</value>
@@ -162,11 +168,13 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot6),tmdb)">TMDb</value>
   </variable>
 
+
   <!-- Variables for each rating slot (1-6) -->
   <variable name="Rating1ValueVar">
     <value condition="String.IsEqual(Skin.String(RatingSlot1),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -179,6 +187,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot2),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -191,6 +200,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot3),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -203,6 +213,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot4),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -215,6 +226,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot5),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -227,6 +239,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot6),metacritic)">$INFO[Window(Home).Property(nimbus.metascore)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),trakt)">$INFO[Window(Home).Property(nimbus.traktRating)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdRating)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdRatingX2)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistRating)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rtc)">$INFO[Window(Home).Property(nimbus.tomatoMeter)]%</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserMeter)]%</value>
@@ -239,6 +252,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot1),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -251,6 +265,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot2),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -263,6 +278,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot3),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -275,6 +291,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot4),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -287,6 +304,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot5),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -299,6 +317,7 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot6),metacritic)">$INFO[Window(Home).Property(nimbus.metascoreImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),trakt)">$INFO[Window(Home).Property(nimbus.traktImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxd)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxdx2)">$INFO[Window(Home).Property(nimbus.letterboxdImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),mdblist)">$INFO[Window(Home).Property(nimbus.mdblistImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rtc)">$INFO[Window(Home).Property(nimbus.tomatoImage)]</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rta)">$INFO[Window(Home).Property(nimbus.tomatoUserImage)]</value>
@@ -312,7 +331,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot1),none)">Skin.SetString(RatingSlot1,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),metacritic)">Skin.SetString(RatingSlot1,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),trakt)">Skin.SetString(RatingSlot1,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxd)">Skin.SetString(RatingSlot1,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxd)">Skin.SetString(RatingSlot1,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot1),letterboxdx2)">Skin.SetString(RatingSlot1,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),mdblist)">Skin.SetString(RatingSlot1,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rtc)">Skin.SetString(RatingSlot1,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot1),rta)">Skin.SetString(RatingSlot1,imdb)</value>
@@ -325,7 +345,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot2),none)">Skin.SetString(RatingSlot2,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),metacritic)">Skin.SetString(RatingSlot2,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),trakt)">Skin.SetString(RatingSlot2,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxd)">Skin.SetString(RatingSlot2,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxd)">Skin.SetString(RatingSlot2,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot2),letterboxdx2)">Skin.SetString(RatingSlot2,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),mdblist)">Skin.SetString(RatingSlot2,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rtc)">Skin.SetString(RatingSlot2,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot2),rta)">Skin.SetString(RatingSlot2,imdb)</value>
@@ -338,7 +359,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot3),none)">Skin.SetString(RatingSlot3,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),metacritic)">Skin.SetString(RatingSlot3,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),trakt)">Skin.SetString(RatingSlot3,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxd)">Skin.SetString(RatingSlot3,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxd)">Skin.SetString(RatingSlot3,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot3),letterboxdx2)">Skin.SetString(RatingSlot3,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),mdblist)">Skin.SetString(RatingSlot3,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rtc)">Skin.SetString(RatingSlot3,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot3),rta)">Skin.SetString(RatingSlot3,imdb)</value>
@@ -351,7 +373,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot4),none)">Skin.SetString(RatingSlot4,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),metacritic)">Skin.SetString(RatingSlot4,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),trakt)">Skin.SetString(RatingSlot4,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxd)">Skin.SetString(RatingSlot4,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxd)">Skin.SetString(RatingSlot4,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot4),letterboxdx2)">Skin.SetString(RatingSlot4,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),mdblist)">Skin.SetString(RatingSlot4,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rtc)">Skin.SetString(RatingSlot4,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot4),rta)">Skin.SetString(RatingSlot4,imdb)</value>
@@ -364,7 +387,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot5),none)">Skin.SetString(RatingSlot5,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),metacritic)">Skin.SetString(RatingSlot5,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),trakt)">Skin.SetString(RatingSlot5,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxd)">Skin.SetString(RatingSlot5,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxd)">Skin.SetString(RatingSlot5,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot5),letterboxdx2)">Skin.SetString(RatingSlot5,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),mdblist)">Skin.SetString(RatingSlot5,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rtc)">Skin.SetString(RatingSlot5,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot5),rta)">Skin.SetString(RatingSlot5,imdb)</value>
@@ -377,7 +401,8 @@
     <value condition="String.IsEqual(Skin.String(RatingSlot6),none)">Skin.SetString(RatingSlot6,metacritic)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),metacritic)">Skin.SetString(RatingSlot6,trakt)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),trakt)">Skin.SetString(RatingSlot6,letterboxd)</value>
-    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxd)">Skin.SetString(RatingSlot6,mdblist)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxd)">Skin.SetString(RatingSlot6,letterboxdx2)</value>
+    <value condition="String.IsEqual(Skin.String(RatingSlot6),letterboxdx2)">Skin.SetString(RatingSlot6,mdblist)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),mdblist)">Skin.SetString(RatingSlot6,rtc)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rtc)">Skin.SetString(RatingSlot6,rta)</value>
     <value condition="String.IsEqual(Skin.String(RatingSlot6),rta)">Skin.SetString(RatingSlot6,imdb)</value>
@@ -397,6 +422,7 @@
             [String.IsEqual(Skin.String($PARAM[rating_slot]),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] | 
             [String.IsEqual(Skin.String($PARAM[rating_slot]),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+            [String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String($PARAM[rating_slot]),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String($PARAM[rating_slot]),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String($PARAM[rating_slot]),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -409,6 +435,7 @@
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),metacritic)">MetacriticRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),trakt)">TraktRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxd)">LetterboxdRatingImageWidth</include>
+        <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxdx2)">LetterboxdRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),mdblist)">MDbListRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),rtc)">RTCRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),rta)">RTARatingImageWidth</include>
@@ -454,6 +481,7 @@
 			[String.IsEqual(Skin.String(RatingSlot1),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] | 
 			[String.IsEqual(Skin.String(RatingSlot1),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot1),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot1),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot1),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot1),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot1),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -463,6 +491,7 @@
 			[String.IsEqual(Skin.String(RatingSlot2),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 			[String.IsEqual(Skin.String(RatingSlot2),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot2),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot2),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot2),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot2),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot2),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -472,6 +501,7 @@
 			[String.IsEqual(Skin.String(RatingSlot3),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 			[String.IsEqual(Skin.String(RatingSlot3),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot3),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot3),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot3),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot3),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot3),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -481,6 +511,7 @@
 			[String.IsEqual(Skin.String(RatingSlot4),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 			[String.IsEqual(Skin.String(RatingSlot4),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot4),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot4),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot4),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot4),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot4),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -490,6 +521,7 @@
 			[String.IsEqual(Skin.String(RatingSlot5),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 			[String.IsEqual(Skin.String(RatingSlot5),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot5),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot5),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot5),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot5),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot5),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -499,6 +531,7 @@
 			[String.IsEqual(Skin.String(RatingSlot6),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 			[String.IsEqual(Skin.String(RatingSlot6),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 			[String.IsEqual(Skin.String(RatingSlot6),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot6),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 			[String.IsEqual(Skin.String(RatingSlot6),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 			[String.IsEqual(Skin.String(RatingSlot6),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 			[String.IsEqual(Skin.String(RatingSlot6),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -559,6 +592,7 @@
 								[String.IsEqual(Skin.String(RatingSlot1),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] | 
 								[String.IsEqual(Skin.String(RatingSlot1),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot1),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot1),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot1),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot1),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot1),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -568,6 +602,7 @@
 								[String.IsEqual(Skin.String(RatingSlot2),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 								[String.IsEqual(Skin.String(RatingSlot2),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot2),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot2),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot2),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot2),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot2),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -577,6 +612,7 @@
 								[String.IsEqual(Skin.String(RatingSlot3),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 								[String.IsEqual(Skin.String(RatingSlot3),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot3),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot3),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot3),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot3),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot3),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -586,6 +622,7 @@
 								[String.IsEqual(Skin.String(RatingSlot4),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 								[String.IsEqual(Skin.String(RatingSlot4),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot4),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot4),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot4),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot4),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot4),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -595,6 +632,7 @@
 								[String.IsEqual(Skin.String(RatingSlot5),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 								[String.IsEqual(Skin.String(RatingSlot5),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot5),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot5),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot5),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot5),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot5),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -604,6 +642,7 @@
 								[String.IsEqual(Skin.String(RatingSlot6),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
 								[String.IsEqual(Skin.String(RatingSlot6),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
 								[String.IsEqual(Skin.String(RatingSlot6),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot6),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
 								[String.IsEqual(Skin.String(RatingSlot6),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
 								[String.IsEqual(Skin.String(RatingSlot6),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
 								[String.IsEqual(Skin.String(RatingSlot6),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -644,6 +683,7 @@
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),metacritic)">MetacriticRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),trakt)">TraktRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxd)">LetterboxdRatingImageWidth</include>
+        <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),letterboxdx2)">LetterboxdRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),mdblist)">MDbListRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),rtc)">RTCRatingImageWidth</include>
         <include condition="String.IsEqual(Skin.String($PARAM[rating_slot]),rta)">RTARatingImageWidth</include>
@@ -713,6 +753,7 @@
             [String.IsEqual(Skin.String(RatingSlot1),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] | 
             [String.IsEqual(Skin.String(RatingSlot1),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot1),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot1),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot1),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot1),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot1),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -722,6 +763,7 @@
             [String.IsEqual(Skin.String(RatingSlot2),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
             [String.IsEqual(Skin.String(RatingSlot2),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot2),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot2),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot2),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot2),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot2),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -731,6 +773,7 @@
             [String.IsEqual(Skin.String(RatingSlot3),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
             [String.IsEqual(Skin.String(RatingSlot3),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot3),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot3),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot3),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot3),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot3),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -740,6 +783,7 @@
             [String.IsEqual(Skin.String(RatingSlot4),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
             [String.IsEqual(Skin.String(RatingSlot4),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot4),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot4),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot4),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot4),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot4),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -749,6 +793,7 @@
             [String.IsEqual(Skin.String(RatingSlot5),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
             [String.IsEqual(Skin.String(RatingSlot5),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot5),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot5),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot5),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot5),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot5),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |
@@ -758,6 +803,7 @@
             [String.IsEqual(Skin.String(RatingSlot6),metacritic) + !String.IsEmpty(Window(Home).Property(nimbus.metascore))] |
             [String.IsEqual(Skin.String(RatingSlot6),trakt) + !String.IsEmpty(Window(Home).Property(nimbus.traktRating))] |
             [String.IsEqual(Skin.String(RatingSlot6),letterboxd) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
+					[String.IsEqual(Skin.String(RatingSlot6),letterboxdx2) + !String.IsEmpty(Window(Home).Property(nimbus.letterboxdRating))] |
             [String.IsEqual(Skin.String(RatingSlot6),mdblist) + !String.IsEmpty(Window(Home).Property(nimbus.mdblistRating))] |
             [String.IsEqual(Skin.String(RatingSlot6),rtc) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoMeter))] |
             [String.IsEqual(Skin.String(RatingSlot6),rta) + !String.IsEmpty(Window(Home).Property(nimbus.tomatoUserMeter))] |

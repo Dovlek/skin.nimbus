@@ -210,9 +210,13 @@
             <texture>loading.gif</texture>
           </control>
           <control type="list" id="50">
-            <onright condition="System.AddonIsEnabled(script.embuary.info) + Control.HasFocus(50) + !$EXP[isSet]">RunScript(script.embuary.info,call=person,query='$ESCINFO[Container(50).ListItem.Label]')</onright>
-            <onright condition="System.HasAddon(script.embuary.info) + !System.AddonIsEnabled(script.embuary.info) + !$EXP[isSet]">EnableAddon(script.embuary.info)</onright>
-            <onright condition="!System.HasAddon(script.embuary.info) + !$EXP[isSet]">InstallAddon(script.embuary.info)</onright>
+            <onright condition="String.IsEqual(Skin.String(current_search_provider),4) + !$EXP[isSet]">Skin.SetString(nimbus.actor.query,$INFO[Container(50).ListItem.Label])</onright>
+            <onright condition="String.IsEqual(Skin.String(current_search_provider),4) + !$EXP[isSet]">Skin.SetString(nimbus.actor.type,$INFO[ListItem.DBType])</onright>
+            <onright condition="String.IsEqual(Skin.String(current_search_provider),4) + !$EXP[isSet]">Dialog.Close(all)</onright>
+            <onright condition="String.IsEqual(Skin.String(current_search_provider),4) + !$EXP[isSet]">RunScript(script.nimbus.helper,mode=actions.actor_search_seren)</onright>
+            <onright condition="!String.IsEqual(Skin.String(current_search_provider),4) + System.AddonIsEnabled(script.embuary.info) + Control.HasFocus(50) + !$EXP[isSet]">RunScript(script.embuary.info,call=person,query='$ESCINFO[Container(50).ListItem.Label]')</onright>
+            <onright condition="!String.IsEqual(Skin.String(current_search_provider),4) + System.HasAddon(script.embuary.info) + !System.AddonIsEnabled(script.embuary.info) + !$EXP[isSet]">EnableAddon(script.embuary.info)</onright>
+            <onright condition="!String.IsEqual(Skin.String(current_search_provider),4) + !System.HasAddon(script.embuary.info) + !$EXP[isSet]">InstallAddon(script.embuary.info)</onright>
             <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
             <include content="CenterList104">
               <param name="id" value="50" />
