@@ -189,6 +189,7 @@
 								<param name="control_id" value="803" />
 								<param name="onclick" value="$VAR[TRAKTButtonActionsVar]" />
 								<param name="icon" value="icons/submenu/trakt.png" />
+								<param name="visible" value="!String.IsEqual(Skin.String(current_search_provider),4)" />
 							</include>
 							<include content="IconButton">
 								<param name="control_id" value="804" />
