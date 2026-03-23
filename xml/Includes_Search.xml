@@ -32,13 +32,13 @@
       <param name="widget_target" value="videos"/>
       <param name="list_id" value="19015"/>
     </include>
-    <include content="WidgetListPoster" condition="!Skin.HasSetting(HidePeopleResults) + String.IsEqual(Skin.String(current_search_provider),2)">
+    <include content="WidgetListPoster" condition="!Skin.HasSetting(HidePeopleResults) + [String.IsEqual(Skin.String(current_search_provider),2) | String.IsEqual(Skin.String(current_search_provider),4)]">
       <param name="content_path" value="$VAR[SearchProviderActors/ActressesMoviesVar]"/>
       <param name="widget_header" value="Actors/Actresses (Movies)"/>
       <param name="widget_target" value="videos"/>
       <param name="list_id" value="19016"/>
     </include>
-    <include content="WidgetListPoster" condition="!Skin.HasSetting(HidePeopleResults) + String.IsEqual(Skin.String(current_search_provider),2)">
+    <include content="WidgetListPoster" condition="!Skin.HasSetting(HidePeopleResults) + [String.IsEqual(Skin.String(current_search_provider),2) | String.IsEqual(Skin.String(current_search_provider),4)]">
       <param name="content_path" value="$VAR[SearchProviderActors/ActressesTVShowsVar]"/>
       <param name="widget_header" value="Actors/Actresses (TV Shows)"/>
       <param name="widget_target" value="videos"/>

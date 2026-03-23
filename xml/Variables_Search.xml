@@ -69,10 +69,12 @@
 
 	<variable name="SearchProviderActors/ActressesMoviesVar">
     <value condition="!String.IsEmpty(Window(home).Property(nimbus.search.input.encoded)) + String.IsEqual(Skin.String(current_search_provider),2)">plugin://plugin.video.umbrella/?action=actorSearchMovies&amp;name=$INFO[Window(home).Property(nimbus.search.input.encoded)]</value>
+    <value condition="!String.IsEmpty(Window(home).Property(nimbus.search.input.encoded)) + String.IsEqual(Skin.String(current_search_provider),4)">plugin://plugin.video.seren/?action=movieByActor&amp;actionArgs=$INFO[Window(home).Property(nimbus.search.input.encoded)]</value>
 	</variable>
 
 	<variable name="SearchProviderActors/ActressesTVShowsVar">
     <value condition="!String.IsEmpty(Window(home).Property(nimbus.search.input.encoded)) + String.IsEqual(Skin.String(current_search_provider),2)">plugin://plugin.video.umbrella/?action=actorSearchTV&amp;name=$INFO[Window(home).Property(nimbus.search.input.encoded)]</value>
+    <value condition="!String.IsEmpty(Window(home).Property(nimbus.search.input.encoded)) + String.IsEqual(Skin.String(current_search_provider),4)">plugin://plugin.video.seren/?action=showsByActor&amp;actionArgs=$INFO[Window(home).Property(nimbus.search.input.encoded)]</value>
 	</variable>
 
 	<variable name="SearchProviderKeywordMoviesVar">

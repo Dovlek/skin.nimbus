@@ -358,7 +358,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HidePeopleResults)</onclick>
 					<selected>!Skin.HasSetting(HidePeopleResults)</selected>
-					<visible>String.IsEqual(Skin.String(SearchSetting),0) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1) | String.IsEqual(Skin.String(current_search_provider),3)]</visible>
+					<visible>String.IsEqual(Skin.String(SearchSetting),0) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1) | String.IsEqual(Skin.String(current_search_provider),3) | String.IsEqual(Skin.String(current_search_provider),4)]</visible>
 				</control>
 				<control type="radiobutton" id="64707">
 					<label>   - Actors/Actresses (Movies)</label>
