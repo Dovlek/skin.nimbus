@@ -111,7 +111,7 @@
 						<!-- <param name="width" value="600"/> -->
 					</include>
 					<control type="label">
-						<visible>![$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + !String.IsEqual(Window(home).Property(nimbus.search.history.count),0)</visible>
+						<visible>![$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + !String.IsEqual(Window(home).Property(nimbus.search.history.count),0) + !Skin.HasSetting(DisableSearchHistory)</visible>
 						<top>200</top>
 						<left>90</left>
 						<width>820</width>
@@ -132,10 +132,10 @@
 						<font>font27</font>
 						<label>$INFO[Window(home).Property(nimbus.search.history.empty)]</label>
 						<textcolor>unfocused_text</textcolor>
-						<visible>String.IsEqual(Window(home).Property(nimbus.search.history.count),0)</visible>
+						<visible>String.IsEqual(Window(home).Property(nimbus.search.history.count),0) + !Skin.HasSetting(DisableSearchHistory)</visible>
 					</control>
 					<control type="fixedlist" id="9000">
-					<visible>!String.IsEqual(Window(home).Property(nimbus.search.history.count),0)</visible>
+					<visible>!String.IsEqual(Window(home).Property(nimbus.search.history.count),0) + !Skin.HasSetting(DisableSearchHistory)</visible>
 						<left>25</left>
 						<top>300</top>
 						<width>825</width>
@@ -195,6 +195,7 @@
 								<param name="control_id" value="804" />
 								<param name="onclick" value="RunScript(script.nimbus.helper,mode=remove_all_spaths)" />
 								<param name="icon" value="icons/submenu/trash.png" />
+								<param name="visible" value="!Skin.HasSetting(DisableSearchHistory)" />
 							</include>
 							<include content="IconButton">
 								<param name="control_id" value="805" />
