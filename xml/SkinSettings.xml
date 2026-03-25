@@ -324,17 +324,17 @@
 					<include>DefaultSettingButton</include>
 					<onclick>$VAR[CurrentSearchProviderToggleVar]</onclick>
 				</control>
-				<control type="button" id="64701">
-					<label>Home screen search icon opens...</label>
-					<label2>$VAR[SearchSettingVar]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>$VAR[SearchToggleVar]</onclick>
-				</control>
 				<control type="radiobutton" id="64714">
 					<label>Save search history</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(DisableSearchHistory)</onclick>
 					<selected>!Skin.HasSetting(DisableSearchHistory)</selected>
+				</control>
+				<control type="button" id="64701">
+					<label>Home screen search icon opens...</label>
+					<label2>$VAR[SearchSettingVar]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>$VAR[SearchToggleVar]</onclick>
 				</control>
 				<control type="radiobutton" id="64702">
 					<label>   - $LOCALIZE[342]</label>
