@@ -31,7 +31,8 @@
 						<radioposx>590</radioposx>
 						<label>Reload skin</label>
 						<selected>!Skin.HasSetting(shutdown.hide.reload)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.reload)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.reload)">Skin.SetBool(shutdown.hide.reload)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.reload)">Skin.Reset(shutdown.hide.reload)</onclick>
 					</control>
 					<control type="radiobutton" id="11312">
 						<width>700</width>
@@ -39,7 +40,8 @@
 						<radioposx>590</radioposx>
 						<label>Skin settings</label>
 						<selected>!Skin.HasSetting(shutdown.hide.skinsettings)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.skinsettings)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.skinsettings)">Skin.SetBool(shutdown.hide.skinsettings)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.skinsettings)">Skin.Reset(shutdown.hide.skinsettings)</onclick>
 					</control>
 					<control type="radiobutton" id="11313">
 						<width>700</width>
@@ -47,7 +49,8 @@
 						<radioposx>590</radioposx>
 						<label>Toggle debugging</label>
 						<selected>!Skin.HasSetting(shutdown.hide.debug)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.debug)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.debug)">Skin.SetBool(shutdown.hide.debug)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.debug)">Skin.Reset(shutdown.hide.debug)</onclick>
 					</control>
 					<control type="radiobutton" id="11314">
 						<width>700</width>
@@ -55,7 +58,8 @@
 						<radioposx>590</radioposx>
 						<label>System information</label>
 						<selected>!Skin.HasSetting(shutdown.hide.sysinfo)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.sysinfo)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.sysinfo)">Skin.SetBool(shutdown.hide.sysinfo)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.sysinfo)">Skin.Reset(shutdown.hide.sysinfo)</onclick>
 					</control>
 					<control type="radiobutton" id="11315">
 						<width>700</width>
@@ -63,7 +67,8 @@
 						<radioposx>590</radioposx>
 						<label>Power off</label>
 						<selected>!Skin.HasSetting(shutdown.hide.poweroff)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.poweroff)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.poweroff)">Skin.SetBool(shutdown.hide.poweroff)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.poweroff)">Skin.Reset(shutdown.hide.poweroff)</onclick>
 					</control>
 					<control type="radiobutton" id="11316">
 						<width>700</width>
@@ -71,7 +76,8 @@
 						<radioposx>590</radioposx>
 						<label>Shutdown timer</label>
 						<selected>!Skin.HasSetting(shutdown.hide.timer)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.timer)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.timer)">Skin.SetBool(shutdown.hide.timer)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.timer)">Skin.Reset(shutdown.hide.timer)</onclick>
 					</control>
 					<control type="radiobutton" id="11317">
 						<width>700</width>
@@ -79,7 +85,8 @@
 						<radioposx>590</radioposx>
 						<label>Suspend</label>
 						<selected>!Skin.HasSetting(shutdown.hide.suspend)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.suspend)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.suspend)">Skin.SetBool(shutdown.hide.suspend)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.suspend)">Skin.Reset(shutdown.hide.suspend)</onclick>
 					</control>
 					<control type="radiobutton" id="11318">
 						<width>700</width>
@@ -87,7 +94,8 @@
 						<radioposx>590</radioposx>
 						<label>Hibernate</label>
 						<selected>!Skin.HasSetting(shutdown.hide.hibernate)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.hibernate)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.hibernate)">Skin.SetBool(shutdown.hide.hibernate)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.hibernate)">Skin.Reset(shutdown.hide.hibernate)</onclick>
 					</control>
 					<control type="radiobutton" id="11319">
 						<width>700</width>
@@ -95,7 +103,8 @@
 						<radioposx>590</radioposx>
 						<label>Reboot</label>
 						<selected>!Skin.HasSetting(shutdown.hide.reboot)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.reboot)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.reboot)">Skin.SetBool(shutdown.hide.reboot)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.reboot)">Skin.Reset(shutdown.hide.reboot)</onclick>
 					</control>
 					<control type="radiobutton" id="11320">
 						<width>700</width>
@@ -103,7 +112,8 @@
 						<radioposx>590</radioposx>
 						<label>Exit</label>
 						<selected>!Skin.HasSetting(shutdown.hide.exit)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.exit)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.exit)">Skin.SetBool(shutdown.hide.exit)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.exit)">Skin.Reset(shutdown.hide.exit)</onclick>
 					</control>
 					<control type="radiobutton" id="11321">
 						<width>700</width>
@@ -111,7 +121,8 @@
 						<radioposx>590</radioposx>
 						<label>Log off</label>
 						<selected>!Skin.HasSetting(shutdown.hide.logoff)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.logoff)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.logoff)">Skin.SetBool(shutdown.hide.logoff)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.logoff)">Skin.Reset(shutdown.hide.logoff)</onclick>
 					</control>
 					<control type="radiobutton" id="11322">
 						<width>700</width>
@@ -119,7 +130,8 @@
 						<radioposx>590</radioposx>
 						<label>Master mode</label>
 						<selected>!Skin.HasSetting(shutdown.hide.mastermode)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.mastermode)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.mastermode)">Skin.SetBool(shutdown.hide.mastermode)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.mastermode)">Skin.Reset(shutdown.hide.mastermode)</onclick>
 					</control>
 					<control type="radiobutton" id="11323">
 						<width>700</width>
@@ -127,7 +139,8 @@
 						<radioposx>590</radioposx>
 						<label>Inhibit idle shutdown</label>
 						<selected>!Skin.HasSetting(shutdown.hide.inhibitidle)</selected>
-						<onclick>Skin.ToggleSetting(shutdown.hide.inhibitidle)</onclick>
+						<onclick condition="!Skin.HasSetting(shutdown.hide.inhibitidle)">Skin.SetBool(shutdown.hide.inhibitidle)</onclick>
+						<onclick condition="Skin.HasSetting(shutdown.hide.inhibitidle)">Skin.Reset(shutdown.hide.inhibitidle)</onclick>
 					</control>
 				</control>
 			</control>
