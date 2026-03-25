@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1113">
+	<defaultcontrol always="true">11300</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>700</width>
+			<height>1020</height>
+			<control type="group">
+				<left>50</left>
+				<include content="DialogBackgroundCommons">
+					<param name="header_label" value="Power menu items" />
+					<param name="header_id" value="1" />
+				</include>
+			</control>
+			<control type="group" id="11300">
+				<left>25</left>
+				<top>100</top>
+				<control type="grouplist" id="11310">
+					<width>700</width>
+					<height>860</height>
+					<itemgap>0</itemgap>
+					<onup>11310</onup>
+					<ondown>11310</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="11311">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Reload skin</label>
+						<selected>!Skin.HasSetting(shutdown.hide.reload)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.reload)</onclick>
+					</control>
+					<control type="radiobutton" id="11312">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Skin settings</label>
+						<selected>!Skin.HasSetting(shutdown.hide.skinsettings)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.skinsettings)</onclick>
+					</control>
+					<control type="radiobutton" id="11313">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Toggle debugging</label>
+						<selected>!Skin.HasSetting(shutdown.hide.debug)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.debug)</onclick>
+					</control>
+					<control type="radiobutton" id="11314">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>System information</label>
+						<selected>!Skin.HasSetting(shutdown.hide.sysinfo)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.sysinfo)</onclick>
+					</control>
+					<control type="radiobutton" id="11315">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Power off</label>
+						<selected>!Skin.HasSetting(shutdown.hide.poweroff)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.poweroff)</onclick>
+					</control>
+					<control type="radiobutton" id="11316">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Shutdown timer</label>
+						<selected>!Skin.HasSetting(shutdown.hide.timer)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.timer)</onclick>
+					</control>
+					<control type="radiobutton" id="11317">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Suspend</label>
+						<selected>!Skin.HasSetting(shutdown.hide.suspend)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.suspend)</onclick>
+					</control>
+					<control type="radiobutton" id="11318">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Hibernate</label>
+						<selected>!Skin.HasSetting(shutdown.hide.hibernate)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.hibernate)</onclick>
+					</control>
+					<control type="radiobutton" id="11319">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Reboot</label>
+						<selected>!Skin.HasSetting(shutdown.hide.reboot)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.reboot)</onclick>
+					</control>
+					<control type="radiobutton" id="11320">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Exit</label>
+						<selected>!Skin.HasSetting(shutdown.hide.exit)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.exit)</onclick>
+					</control>
+					<control type="radiobutton" id="11321">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Log off</label>
+						<selected>!Skin.HasSetting(shutdown.hide.logoff)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.logoff)</onclick>
+					</control>
+					<control type="radiobutton" id="11322">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Master mode</label>
+						<selected>!Skin.HasSetting(shutdown.hide.mastermode)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.mastermode)</onclick>
+					</control>
+					<control type="radiobutton" id="11323">
+						<width>700</width>
+						<include>DialogSettingButton</include>
+						<radioposx>590</radioposx>
+						<label>Inhibit idle shutdown</label>
+						<selected>!Skin.HasSetting(shutdown.hide.inhibitidle)</selected>
+						<onclick>Skin.ToggleSetting(shutdown.hide.inhibitidle)</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

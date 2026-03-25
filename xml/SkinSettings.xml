@@ -217,6 +217,13 @@
 					<onclick>Skin.ToggleSetting(OneClickClose)</onclick>
 					<selected>Skin.HasSetting(OneClickClose)</selected>
 				</control>
+				<!-- SHUTDOWN MENU ITEMS -->
+				<control type="button" id="63780">
+					<label>    - Customize power menu items</label>
+					<include>DefaultSettingButton</include>
+					<onclick>ActivateWindow(1113)</onclick>
+					<visible>!Skin.HasSetting(OneClickClose)</visible>
+				</control>
 				<!-- MENU ITEMS CASE -->
 				<control type="button" id="63702">
 					<label>Menu items case</label>
