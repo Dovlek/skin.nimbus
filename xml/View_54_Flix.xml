@@ -243,10 +243,28 @@
 					<height>94</height>
 					<texture>overlays/overlaybg.png</texture>
 					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0) | !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+					<visible>!Skin.HasSetting(alt.indicator.layout)</visible>
 					<animation condition="
-						[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] + 
+						[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] +
 						[
-								[$EXP[isMovie] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] | 
+								[$EXP[isMovie] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
+								[[$EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + !Integer.IsGreater(ListItem.Playcount,0) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
+								[!$EXP[isMovie] + !$EXP[isTVShow] + !$EXP[isSeason] + !$EXP[isEpisode] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)]
+						]
+						" effect="fade" time="0" start="100" end="0">Conditional</animation>
+					</control>
+				<control type="image">
+					<left>162</left>
+					<top>270</top>
+					<width>94</width>
+					<height>94</height>
+					<texture>overlays/overlaybg-r.png</texture>
+					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0) | !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+					<visible>Skin.HasSetting(alt.indicator.layout)</visible>
+					<animation condition="
+						[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] +
+						[
+								[$EXP[isMovie] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
 								[[$EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + !Integer.IsGreater(ListItem.Playcount,0) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
 								[!$EXP[isMovie] + !$EXP[isTVShow] + !$EXP[isSeason] + !$EXP[isEpisode] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)]
 						]
@@ -286,11 +304,25 @@
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>right</align>
 					<visible>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] + [$EXP[isMovie] | $EXP[isEpisode]] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+					<visible>!Skin.HasSetting(alt.indicator.layout)</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>333</top>
+					<width>199</width>
+					<label>[LIGHT]$INFO[ListItem.Property(WatchedProgress)]% watched[/LIGHT]</label>
+					<font>font18_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>right</align>
+					<visible>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] + [$EXP[isMovie] | $EXP[isEpisode]] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+					<visible>Skin.HasSetting(alt.indicator.layout)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 			</control>
 			<control type="group">
 				<visible>$EXP[isTVShow] | $EXP[isSeason]</visible>
+				<visible>!Skin.HasSetting(alt.indicator.layout)</visible>
 				<top>320</top>
 				<control type="label">
 					<left>77</left>
@@ -302,21 +334,30 @@
 					<align>right</align>
 					<visible>[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | [$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]]</visible>
 					<visible>
-						Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + 
-						!String.IsEqual(ListItem.Property(WatchedEpisodes),ListItem.Property(TotalEpisodes)) + 
+						Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) +
+						!String.IsEqual(ListItem.Property(WatchedEpisodes),ListItem.Property(TotalEpisodes)) +
 						!String.IsEqual(ListItem.Property(UnWatchedEpisodes),-1)
 					</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-				<!-- <control type="image">
-					<left>218</left>
-					<top>11.2</top>
-					<width>24</width>
-					<height>24</height>
-					<texture colordiffuse="artwork_dim">lists/played-total.png</texture>
-					<visible>[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | [$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]] + !Integer.IsEqual(ListItem.Property(UnwatchedEpisodes),0)</visible>
-					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-				</control> -->
+			</control>
+			<control type="label">
+				<left>20</left>
+				<top>332</top>
+				<width>199</width>
+				<label>[LIGHT]$INFO[ListItem.Property(UnwatchedEpisodes),, remaining][/LIGHT]</label>
+				<font>font18_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<align>right</align>
+				<visible>$EXP[isTVShow] | $EXP[isSeason]</visible>
+				<visible>[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | [$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]]</visible>
+				<visible>
+					Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) +
+					!String.IsEqual(ListItem.Property(WatchedEpisodes),ListItem.Property(TotalEpisodes)) +
+					!String.IsEqual(ListItem.Property(UnWatchedEpisodes),-1)
+				</visible>
+				<visible>Skin.HasSetting(alt.indicator.layout)</visible>
+				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
 				<left>31</left>
@@ -324,6 +365,15 @@
 				<width>23</width>
 				<height>23</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
+				<visible>!Skin.HasSetting(alt.indicator.layout)</visible>
+			</control>
+			<control type="image">
+				<left>225</left>
+				<top>336</top>
+				<width>23</width>
+				<height>23</height>
+				<texture>$VAR[WallWatchedIconVar]</texture>
+				<visible>Skin.HasSetting(alt.indicator.layout)</visible>
 			</control>
 			<!-- <control type="group">
 				<left>188</left>

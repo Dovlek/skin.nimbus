@@ -304,6 +304,18 @@
 					<onclick>Skin.SetNumeric(nimbus_digital_expired_window)</onclick>
 					<visible>Skin.HasSetting(Enable.SmartStatus)</visible>
 				</control>
+				<control type="radiobutton" id="707">
+					<label>Fill progress indicator</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(fill_progress)</onclick>
+					<selected>Skin.HasSetting(fill_progress)</selected>
+				</control>
+				<control type="radiobutton" id="63712">
+					<label>Alternative indicator layout</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(alt.indicator.layout)</selected>
+					<onclick>Skin.ToggleSetting(alt.indicator.layout)</onclick>
+				</control>
 			</control>
 
 			<control type="grouplist" id="647">
@@ -537,12 +549,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
-				</control>
-				<control type="radiobutton" id="707">
-					<label>Fill progress indicator</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(fill_progress)</onclick>
-					<selected>Skin.HasSetting(fill_progress)</selected>
 				</control>
 				<control type="button" id="708">
 					<label>$LOCALIZE[31024]</label>

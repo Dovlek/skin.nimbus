@@ -172,7 +172,7 @@
 					</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-        <control type="image">
+		<control type="image">
 					<left>21</left>
 					<top>217</top>
 					<width>580</width>
@@ -189,13 +189,13 @@
 						]
 					</visible>
 				</control>
-        <control type="group">
-          <left>40</left>
-          <top>255</top>
-          <width>390</width>
-          <control type="label">
-            <left>9</left>
-            <top>25</top>
+		<control type="group">
+		  <left>40</left>
+		  <top>260</top>
+		  <width>500</width>
+		  <control type="label">
+			<left>9</left>
+			<top>25</top>
 						<visible>
 							!$EXP[isEpisode] + 
 							[
@@ -208,37 +208,42 @@
 									]
 							]
 						</visible>
-            <label>[LIGHT]$INFO[Container($PARAM[list_id]).ListItem.Title][/LIGHT]</label>
-            <font>font25_title</font>
-            <shadowcolor>text_shadow</shadowcolor>
-            <align>left</align>
-            <scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
-            <scrollspeed>100</scrollspeed>
-          </control>
-          <control type="label">
-            <visible>$EXP[isEpisode]</visible>
-            <label>$INFO[Container($PARAM[list_id]).ListItem.Season]$INFO[Container($PARAM[list_id]).ListItem.Episode,x,]$INFO[Container($PARAM[list_id]).ListItem.Title, | ]</label>
-            <font>font25_title</font>
-            <shadowcolor>text_shadow</shadowcolor>
-            <align>left</align>
-            <scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
-            <scrollspeed>100</scrollspeed>
-          </control>
-          <control type="label">
-            <visible>$EXP[isEpisode]</visible>
-            <top>35</top>
-            <label>[LIGHT]$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle][/LIGHT]</label>
-            <font>font10_title</font>
-            <shadowcolor>text_shadow</shadowcolor>
-            <align>left</align>
-            <scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
-            <scrollspeed>100</scrollspeed>
-          </control>
-        </control>
+			<label>[LIGHT]$INFO[Container($PARAM[list_id]).ListItem.Title][/LIGHT]</label>
+			<font>font25_title</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<align>left</align>
+			<scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
+			<scrollspeed>100</scrollspeed>
+		  </control>
+		  <control type="label">
+			<visible>$EXP[isEpisode]</visible>
+			<width>533</width>
+			<label>$INFO[Container($PARAM[list_id]).ListItem.Season]$INFO[Container($PARAM[list_id]).ListItem.Episode,x,]$INFO[Container($PARAM[list_id]).ListItem.Title, | ]</label>
+			<font>font25_title</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<align>left</align>
+			<scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
+			<scrollspeed>100</scrollspeed>
+		  </control>
+		  <control type="label">
+			<visible>$EXP[isEpisode]</visible>
+			<top>35</top>
+			<height>25</height>
+			<aligny>center</aligny>
+			<label>[LIGHT]$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle][/LIGHT]</label>
+			<font>font10_title</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<align>left</align>
+			<scroll>[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]]</scroll>
+			<scrollspeed>100</scrollspeed>
+		  </control>
+		</control>
 				<control type="label">
 					<left>306</left>
 					<top>295</top>
-					<width>280</width>
+					<width>248</width>
+					<height>25</height>
+					<aligny>center</aligny>
 					<label>[LIGHT]$INFO[ListItem.Property(WatchedProgress)]% watched[/LIGHT]</label>
 					<font>font18_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -253,7 +258,9 @@
 				<control type="label">
 					<left>217</left>
 					<top>2</top>
-					<width>369</width>
+					<width>337</width>
+					<height>25</height>
+					<aligny>center</aligny>
 					<label>[LIGHT]$INFO[ListItem.Property(UnwatchedEpisodes),, remaining][/LIGHT]</label>
 					<font>font18_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -296,7 +303,7 @@
 			</control>
 			<control type="image">
 				<left>560</left>
-				<top>295</top>
+				<top>296</top>
 				<width>23</width>
 				<height>23</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
@@ -310,11 +317,10 @@
 							[$EXP[isSeason] + String.IsEqual(Skin.String(ItemFanartChoice.seasons),1)]
 					]
 				</visible>
-        <animation condition="
-					[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]] + 
+		<animation condition="
+					[[$PARAM[focused] + Control.HasFocus($PARAM[list_id])] | $PARAM[focused] + [Control.IsVisible(55) | Control.IsVisible(501)]] +
 					[
-								[$EXP[isMovie] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] | 
-								[[$EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + !Integer.IsGreater(ListItem.Playcount,0) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
+								[$EXP[isMovie] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] |
 								[!$EXP[isMovie] + !$EXP[isTVShow] + !$EXP[isSeason] + !$EXP[isEpisode] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)]
 					]
 						" effect="fade" time="0" start="100" end="0">Conditional</animation>
