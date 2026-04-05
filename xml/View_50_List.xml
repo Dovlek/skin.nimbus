@@ -136,14 +136,15 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<include>ArtworkAnimations</include>
 					<animation condition="
-						Skin.HasSetting(Disable.50_ListSetting1_Ratings) | 
+						[$EXP[isSeason] + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] |
+						[Skin.HasSetting(Disable.50_ListSetting1_Ratings) |
 							[
-									[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] | 
-									[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] | 
-									[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] | 
+									[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] |
+									[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] |
+									[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] |
 									[Container.Content(episodes) + String.IsEqual(Skin.String(ListArtworkChoice.episodes),1)]
 							] +
-						$PARAM[ratings_notvisible]" 
+						$PARAM[ratings_notvisible]]"
 							reversible="true">
 							<effect type="slide" start="0,0" end="45,0" delay="200" time="500" tween="cubic" easing="in" />
 					</animation>
@@ -527,20 +528,21 @@
 				<animation effect="slide" start="0,0" end="-75,0" tween="cubic" easing="in" time="500" 
 				condition="Container.Content(addons) + !String.StartsWith(Container.PluginName,plugin.video.otaku) + !String.IsEqual(Skin.String(ListArtworkChoice.addons),2)">Conditional</animation>
 				<animation condition="
-						$EXP[isContent] + 
+						[$EXP[isSeason] + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] |
+						[$EXP[isContent] +
 					[Skin.HasSetting(Disable.50_ListSetting1_Ratings) + [
-						[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] | 
-						[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] | 
-						[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] | 
+						[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] |
+						[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] |
+						[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] |
 						[Container.Content(episodes) + String.IsEqual(Skin.String(ListArtworkChoice.episodes),1)]
-					]] | 
+					]] |
 						[
-								[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] | 
-								[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] | 
-								[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] | 
+								[Container.Content(movies) + String.IsEqual(Skin.String(ListArtworkChoice.movies),1)] |
+								[Container.Content(tvshows) + String.IsEqual(Skin.String(ListArtworkChoice.tvshows),1)] |
+								[Container.Content(seasons) + String.IsEqual(Skin.String(ListArtworkChoice.seasons),1)] |
 								[Container.Content(episodes) + String.IsEqual(Skin.String(ListArtworkChoice.episodes),1)]
 					] +
-					$PARAM[ratings_notvisible]" 
+					$PARAM[ratings_notvisible]]"
 						reversible="true">
 					<effect type="slide" start="0,0" end="-45,0" delay="200" time="500" tween="cubic" easing="in" />
 				</animation>
