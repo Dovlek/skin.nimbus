@@ -248,14 +248,14 @@
 						</visible>
 						<include>ListLandscapeArtworkSlide</include>
 						<control type="image">
-							<top>589</top>
+							<bottom>240</bottom>
 							<left>71</left>
 							<width>928</width>
 							<height>250</height>
 							<texture colordiffuse="A8FFFFFF" background="true">overlays/overlayfade-ls.png</texture>
 						</control>
 						<control type="image">
-							<top>674</top>
+							<bottom>240</bottom>
 							<left>120</left>
 							<width>300</width>
 							<height>116</height>
