@@ -916,6 +916,13 @@
 					<selected>Skin.HasSetting(Enable.TrailerReadyIcon)</selected>
 					<visible>String.IsEqual(Skin.String(trailerSetting),1)</visible>
 				</control>
+				<control type="radiobutton" id="6306">
+					<label>    - Enable subtitles on trailer start</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Trailer.AutoSubtitles)</onclick>
+					<selected>Skin.HasSetting(Trailer.AutoSubtitles)</selected>
+					<visible>!String.IsEqual(Skin.String(trailerSetting),0)</visible>
+				</control>
 			</control>
 
 			<control type="grouplist" id="640">
