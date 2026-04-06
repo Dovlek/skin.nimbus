@@ -83,7 +83,7 @@
 					<effect type="fade" start="100" end="80" time="700" tween="sine" easing="inout" />
 					<effect type="fadediffuse" start="FFE9E9E9" end="FF777777" time="700" />
 				</animation>
-				<visible>[Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating | String.IsEqual(Window(Home).Property(nimbus.search.refreshing),true)] + ![Skin.HasSetting(no_spinner_$PARAM[list_id]) + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0)]</visible>
+				<visible>[Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating | String.IsEqual(Window(Home).Property(nimbus.search.refreshing),true)] + ![Skin.HasSetting(no_spinner_$PARAM[list_id]) + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) + !Window.IsVisible(1121)]</visible>
 				<right>0</right>
 				<height>346</height>
 				<include content="WidgetVisibilityAnimations">
@@ -262,7 +262,7 @@
 					<effect type="fade" start="100" end="80" time="700" tween="sine" easing="inout" />
 					<effect type="fadediffuse" start="FFE9E9E9" end="FF777777" time="700" />
 				</animation>
-				<visible>[Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating | String.IsEqual(Window(Home).Property(nimbus.search.refreshing),true)] + ![Skin.HasSetting(no_spinner_$PARAM[list_id]) + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0)]</visible>
+				<visible>[Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating | String.IsEqual(Window(Home).Property(nimbus.search.refreshing),true)] + ![Skin.HasSetting(no_spinner_$PARAM[list_id]) + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) + !Window.IsVisible(1121)]</visible>
 				<itemlayout width="262" height="393">
 					<control type="group">
 						<top>26</top>
